@@ -73,7 +73,7 @@
                 resetButton();
             } else {
                 $(".email-input").val("");
-                $(".email-submit").val("ERROR").css("background-color", "red");
+                $(".email-submit").html("ERROR").css("background-color", "red");
                 resetButton();
             }
         }
@@ -93,7 +93,6 @@
         let res = await fetch("https://a.klaviyo.com/api/identify", options);
         return parseInt(res.status) == 200;
     }
-
     $(".email-form").submit(function () {
         submitForm();
         return false;

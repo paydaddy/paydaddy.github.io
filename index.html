@@ -136,11 +136,11 @@
                             </svg>
                         </button>
                         <div class="input-section" hidden>
-                            <form class="input-section-container email-form" action="?" method="POST">
+                            <form id="email-form" class="input-section-container email-form" action="?" method="POST">
                                 <input class="btn--small email-input" placeholder="Email" type="email" />
                                 <button class="g-recaptcha btn--small email-submit"
-                                    data-sitekey="6LezQG8eAAAAAJDtVcbAHPxdBjdNelbTCDBJOdEN"
-                                    data-callback='onSubmit'>SUBMIT</button>
+                                    data-sitekey="6LezQG8eAAAAAJDtVcbAHPxdBjdNelbTCDBJOdEN" data-callback='onSubmit'
+                                    type="submit" form="email-form">SUBMIT</button>
                             </form>
                         </div>
                     </div> <!-- end intro-content__notify -->
