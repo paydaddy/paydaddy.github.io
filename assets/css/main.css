@@ -1888,8 +1888,8 @@ input::-moz-focus-inner {
     margin: 0;
     height: 5.6rem !important;
     line-height: 5.4rem !important;
-    border: 1px solid #ffffff;
-    color: #ffffff;
+    border: 1px solid #e0e0e0;
+    color: #e0e0e0;
     cursor: pointer;
     overflow: hidden;
     position: relative;
@@ -1907,7 +1907,7 @@ input::-moz-focus-inner {
     content: "";
     height: 100%;
     width: 0;
-    background-color: #ffffff;
+    background-color: #e0e0e0;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     position: absolute;
     top: 0;
@@ -2681,8 +2681,8 @@ html.no-csstransitions .intro-content__bottom {
 * Button
 */
 .input-section-container {
-    font: white;
     display: flex;
+    flex-direction: row;
 }
 
 .email-input {
@@ -2768,32 +2768,6 @@ html.no-csstransitions .intro-content__bottom {
         top: 20px;
     }
 }
-
-/* @keyframes slideanim {
-    0% {
-        top: 20px;
-        opacity: 0;
-    }
-    5% {
-        top: 0px;
-        opacity: 1;
-    }
-    10% {
-        top: 0;
-        opacity: 1;
-    }
-    20% {
-        opacity: 1;
-    }
-    25% {
-        opacity: 0.1;
-        top: 0;
-    }
-    30% {
-        opacity: 0;
-        top: 20px;
-    }
-} */
 
 /* ------------------------------------------------------------------- 
  * ## copyright
@@ -2965,6 +2939,20 @@ html.no-csstransitions .intro-content__bottom {
         bottom: auto;
         -webkit-transform: translate3d(50%, 0, 0);
         transform: translate3d(50%, 0, 0);
+    }
+    .input-section-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .email-input {
+        width: 250px;
+        border-radius: 4px 4px 0 0 !important;
+    }
+
+    .email-submit {
+        border-radius: 0 0 4px 4px !important;
+        border-color: #e0e0e0 !important;
+        border-left: solid !important;
     }
 }
 
