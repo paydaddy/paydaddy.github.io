@@ -1888,7 +1888,7 @@ input::-moz-focus-inner {
     margin: 0;
     height: 5.6rem !important;
     line-height: 5.4rem !important;
-    border: 1px solid #ffffff !important;
+    border: 1px solid #ffffff;
     color: #ffffff;
     cursor: pointer;
     overflow: hidden;
@@ -2692,6 +2692,8 @@ html.no-csstransitions .intro-content__bottom {
 
 .email-submit {
     border-radius: 0 4px 4px 0 !important;
+    border-color: #e0e0e0 !important;
+    border-left: none !important;
 }
 
 /* ------------------------------------------------------------------- 

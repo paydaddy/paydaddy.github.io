@@ -1,5 +1,9 @@
 /* ===================================================================
+<<<<<<< Updated upstream
  * Imminent 1.0.0 - Main JS
+=======
+ * PayDaddy 1.0.0 - Main JS
+>>>>>>> Stashed changes
  *
  * ------------------------------------------------------------------- */
 
@@ -39,35 +43,38 @@
         });
     };
 
+    /**
+     *
+     */
     /* Button Click
      */
     $("#button").click(function () {
         $("#button").hide("slow");
         $(".input-section").show("slow");
+        $(".email-input").focus();
     });
 
     async function submitForm() {
+        const resetButton = () => {
+            setTimeout(function () {
+                $(".email-submit")
+                    .html("SUBMIT")
+                    .css("background-color", "black");
+            }, 2000);
+        };
         var email = $(".email-input").val();
         if (email !== "") {
             let successPost = await createUser(email);
             if (successPost == true) {
                 $(".email-input").val("");
                 $(".email-submit")
-                    .val("SUCCESS")
+                    .html("SUCCESS")
                     .css("background-color", "green");
-                setTimeout(function () {
-                    $(".email-submit")
-                        .val("SUBMIT")
-                        .css("background-color", "black");
-                }, 2000);
+                resetButton();
             } else {
                 $(".email-input").val("");
                 $(".email-submit").val("ERROR").css("background-color", "red");
-                setTimeout(function () {
-                    $(".email-submit")
-                        .val("SUBMIT")
-                        .css("background-color", "black");
-                }, 2000);
+                resetButton();
             }
         }
     }
