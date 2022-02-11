@@ -48,6 +48,7 @@
      */
     /* Button Click
      */
+
     $("#button").click(function () {
         $("#button").hide("slow");
         $(".input-section").show("slow");
@@ -55,11 +56,11 @@
     });
 
     async function submitForm() {
+        var emailButton = $(".email-submit");
+
         const resetButton = () => {
             setTimeout(function () {
-                $(".email-submit")
-                    .html("SUBMIT")
-                    .css("background-color", "black");
+                emailButton.val("SUBMIT").css("background-color", "black");
             }, 2000);
         };
         var email = $(".email-input").val();
@@ -67,16 +68,19 @@
             let successPost = await createUser(email);
             if (successPost == true) {
                 $(".email-input").val("");
-                $(".email-submit")
-                    .html("SUCCESS")
-                    .css("background-color", "green");
+                emailButton.val("SUCCESS").css("background-color", "green");
                 resetButton();
             } else {
                 $(".email-input").val("");
-                $(".email-submit").html("ERROR").css("background-color", "red");
+                emailButton.val("ERROR").css("background-color", "red");
                 resetButton();
             }
         }
+    }
+
+    // Prevent form resubmission popup
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
     }
 
     async function createUser(email) {

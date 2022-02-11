@@ -20,11 +20,10 @@
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/main.css">
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
     <!-- favicons
     ================================================== -->
     <link rel="icon" href="favicon.png" type="image/png">
+
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P9719NEJZX"></script>
@@ -136,11 +135,9 @@
                             </svg>
                         </button>
                         <div class="input-section" hidden>
-                            <form id="email-form" class="input-section-container email-form" action="?" method="POST">
+                            <form class="input-section-container email-form">
                                 <input class="btn--small email-input" placeholder="Email" type="email" />
-                                <button class="g-recaptcha btn--small email-submit"
-                                    data-sitekey="6LezQG8eAAAAAJDtVcbAHPxdBjdNelbTCDBJOdEN" data-callback='onSubmit'
-                                    type="submit" form="email-form">SUBMIT</button>
+                                <input class="btn--small email-submit" type="submit">SUBMIT</input>
                             </form>
                         </div>
                     </div> <!-- end intro-content__notify -->
