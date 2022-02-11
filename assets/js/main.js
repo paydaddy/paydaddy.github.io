@@ -1,14 +1,15 @@
 /* ===================================================================
-<<<<<<< Updated upstream
- * Imminent 1.0.0 - Main JS
-=======
  * PayDaddy 1.0.0 - Main JS
->>>>>>> Stashed changes
  *
  * ------------------------------------------------------------------- */
 
 (function ($) {
-    "use strict";
+    // Prevent form resubmission popup
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+
+    ("use strict");
 
     const cfg = {
         scrollDuration: 800, // smoothscroll duration
@@ -48,6 +49,35 @@
      */
     /* Button Click
      */
+    function hash(string) {
+        var hash = 0;
+
+        if (string.length == 0) return hash;
+
+        for (i = 0; i < string.length; i++) {
+            char = string.charCodeAt(i);
+            hash = (hash << 5) - hash + char;
+            hash = hash & hash;
+        }
+
+        return hash;
+    }
+
+    $(".secret-form").submit(function () {
+        verifySecret();
+        return false;
+    });
+
+    function verifySecret() {
+        var secret = $(".secret-input").val();
+        var hashedSecret = "93497007";
+        console.log("sdf" + hash("bagel"));
+        if (hash(secret) == hashedSecret) {
+            $(".secret-input").val("");
+            $(".typeform").show();
+            $(".secret_intro-content__bottom").hide();
+        }
+    }
 
     $("#button").click(function () {
         $("#button").hide("slow");
@@ -76,11 +106,6 @@
                 resetButton();
             }
         }
-    }
-
-    // Prevent form resubmission popup
-    if (window.history.replaceState) {
-        window.history.replaceState(null, null, window.location.href);
     }
 
     async function createUser(email) {

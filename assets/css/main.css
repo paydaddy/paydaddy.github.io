@@ -2677,6 +2677,21 @@ html.no-csstransitions .intro-content__bottom {
     display: none;
 }
 
+.secret_intro-content__bottom {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    position: absolute;
+    left: 20px;
+    bottom: 28.6rem;
+}
+
 /*
 * Button
 */
@@ -2684,12 +2699,12 @@ html.no-csstransitions .intro-content__bottom {
     display: flex;
     flex-direction: row;
 }
-
+.secret-input,
 .email-input {
     width: 250px;
     border-radius: 4px 0 0 4px !important;
 }
-
+.secret-submit,
 .email-submit {
     border-radius: 0 4px 4px 0 !important;
     border-color: #e0e0e0 !important;
