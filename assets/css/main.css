@@ -914,7 +914,7 @@ input[type="button"] {
     text-transform: uppercase;
     letter-spacing: 0.6rem;
     height: 6rem;
-    width: 250px;
+    width: 100%;
     line-height: 5.6rem;
     padding: 0 3.2rem;
     margin: 0 0.4rem 1.6rem 0;
@@ -1762,6 +1762,16 @@ input::-moz-focus-inner {
     -ms-flex-align: center;
     align-items: center;
     position: relative;
+}
+.secret-intro-content {
+    z-index: 2;
+    height: 100%;
+    padding-top: 25vh;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    display: block;
 }
 
 /* -------------------------------------------------------------------
@@ -2682,15 +2692,7 @@ html.no-csstransitions .intro-content__bottom {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    -webkit-align-items: flex-end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-    /* position: absolute; */
-    left: 20px;
-    bottom: 28.6rem;
+    margin-top: 3.6rem;
 }
 
 /*
@@ -2710,6 +2712,8 @@ html.no-csstransitions .intro-content__bottom {
 .email-submit {
     border-color: #e0e0e0 !important;
     border-radius: 0 4px 4px 0 !important;
+    width: 250px !important;
+    border-left: none !important;
 }
 
 /* ------------------------------------------------------------------- 
@@ -2910,6 +2914,7 @@ html.no-csstransitions .intro-content__bottom {
     .secret-submit {
         border-radius: 0 0 4px 4px !important;
         border-color: #e0e0e0 !important;
+        border-left: solid 1px !important;
     }
 }
 
@@ -2944,6 +2949,7 @@ html.no-csstransitions .intro-content__bottom {
     .secret-submit {
         border-radius: 0 0 4px 4px !important;
         border-color: #e0e0e0 !important;
+        border-left: solid 1px !important;
     }
 }
 
@@ -2979,6 +2985,7 @@ html.no-csstransitions .intro-content__bottom {
     .secret-submit {
         border-radius: 0 0 4px 4px !important;
         border-color: #e0e0e0 !important;
+        border-left: solid 1px !important;
     }
 }
 
@@ -3015,6 +3022,7 @@ html.no-csstransitions .intro-content__bottom {
     .secret-submit {
         border-radius: 0 0 4px 4px !important;
         border-color: #e0e0e0 !important;
+        border-left: solid 1px !important;
     }
 }
 
