@@ -745,7 +745,7 @@ select {
     font-family: "Gothic A1", sans-serif;
     font-size: 1.5rem;
     line-height: 3.2rem;
-    max-width: 100%;
+    max-width: 250px;
     background-color: #e0e0e0;
     border: 1px solid transparent;
     transition: all 0.3s ease-in-out;
@@ -914,6 +914,7 @@ input[type="button"] {
     text-transform: uppercase;
     letter-spacing: 0.6rem;
     height: 6rem;
+    width: 250px;
     line-height: 5.6rem;
     padding: 0 3.2rem;
     margin: 0 0.4rem 1.6rem 0;
@@ -2687,7 +2688,7 @@ html.no-csstransitions .intro-content__bottom {
     -webkit-align-items: flex-end;
     -ms-flex-align: end;
     align-items: flex-end;
-    position: absolute;
+    /* position: absolute; */
     left: 20px;
     bottom: 28.6rem;
 }
@@ -2704,11 +2705,11 @@ html.no-csstransitions .intro-content__bottom {
     width: 250px;
     border-radius: 4px 0 0 4px !important;
 }
+
 .secret-submit,
 .email-submit {
-    border-radius: 0 4px 4px 0 !important;
     border-color: #e0e0e0 !important;
-    border-left: none !important;
+    border-radius: 0 4px 4px 0 !important;
 }
 
 /* ------------------------------------------------------------------- 
@@ -2895,6 +2896,21 @@ html.no-csstransitions .intro-content__bottom {
     .ss-go-top {
         right: 4rem;
     }
+    .input-section-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .email-input,
+    .secret-input {
+        width: 250px;
+        border-radius: 4px 4px 0 0 !important;
+    }
+
+    .email-submit,
+    .secret-submit {
+        border-radius: 0 0 4px 4px !important;
+        border-color: #e0e0e0 !important;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -2913,6 +2929,21 @@ html.no-csstransitions .intro-content__bottom {
 
     .services-list__item-content {
         padding-right: 0;
+    }
+    .input-section-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .email-input,
+    .secret-input {
+        width: 250px;
+        border-radius: 4px 4px 0 0 !important;
+    }
+
+    .email-submit,
+    .secret-submit {
+        border-radius: 0 0 4px 4px !important;
+        border-color: #e0e0e0 !important;
     }
 }
 
@@ -2933,6 +2964,21 @@ html.no-csstransitions .intro-content__bottom {
         height: 4.8rem;
         width: 4.8rem;
         line-height: 4.8rem;
+    }
+    .input-section-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .email-input,
+    .secret-input {
+        width: 250px;
+        border-radius: 4px 4px 0 0 !important;
+    }
+
+    .email-submit,
+    .secret-submit {
+        border-radius: 0 0 4px 4px !important;
+        border-color: #e0e0e0 !important;
     }
 }
 
@@ -2959,15 +3005,16 @@ html.no-csstransitions .intro-content__bottom {
         display: flex;
         flex-direction: column;
     }
-    .email-input {
+    .email-input,
+    .secret-input {
         width: 250px;
         border-radius: 4px 4px 0 0 !important;
     }
 
-    .email-submit {
+    .email-submit,
+    .secret-submit {
         border-radius: 0 0 4px 4px !important;
         border-color: #e0e0e0 !important;
-        border-left: solid !important;
     }
 }
 
