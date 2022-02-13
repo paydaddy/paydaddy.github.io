@@ -1795,14 +1795,14 @@ input::-moz-focus-inner {
 .intro-content__text h2 {
     display: inline-block;
     font-family: "Gothic A1", sans-serif;
-    font-weight: 400;
-    font-size: 1.4rem;
+    font-weight: 500;
+    font-size: 1.9rem;
     line-height: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
+    /* text-transform: uppercase; */
+    letter-spacing: 0.2em;
     color: white;
     padding-left: 0.6rem;
-    margin-top: 0;
+    margin-top: 10px;
     margin-bottom: 0.8rem;
     position: relative;
 }
@@ -1820,7 +1820,7 @@ input::-moz-focus-inner {
 
 .intro-content__text h1 {
     font-family: "DM Serif Display", serif;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 8rem;
     line-height: 1.2;
     color: #ffffff;
@@ -2350,10 +2350,6 @@ html.no-csstransitions .intro-content__bottom {
 }
 
 @media screen and (max-width: 1024px) {
-    .s-intro {
-        max-height: 800px;
-    }
-
     .intro-content {
         max-width: 600px;
     }
